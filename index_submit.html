@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+	<title>えほんハウス:投稿</title>
+	<meta charset="utf-8">
+	<link rel="icon" href="img/ehonhousefavicon.png" type="image/x-icon">
+	<link rel="shortcut icon" href="img/ehonhousefavicon.png" type="image/x-icon" />
+	<meta name="description" content="Your description">
+	<meta name="keywords" content="Your keywords">
+	<meta name="author" content="Your name">
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="css/responsive.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/superfish.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="js/jquery.cookie.js"></script>
+	<script type="text/javascript">if($(window).width()>1024){document.write("<"+"script src='js/jquery.preloader.js'></"+"script>");}	</script>
+	<script>		
+		 jQuery(window).load(function() {	
+		 $x = $(window).width();		
+	if($x > 1024)
+	{			
+	jQuery("#content .row").preloader();    }			 
+		
+		 jQuery('.spinner').animate({'opacity':0},1000,'easeOutCubic',function (){jQuery(this).css('display','none')});	
+  		  }); 
+					
+	</script>
+
+	<!--[if lt IE 8]>
+  		<div style='text-align:center'><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/img/upgrade.jpg"border="0"alt=""/></a></div>  
+ 	<![endif]-->
+	<!--[if (gt IE 9)|!(IE)]><!-->
+	<!--<![endif]-->
+	<!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <link rel="stylesheet" href="css/docs.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/ie.css" type="text/css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+  <![endif]-->
+	</head>
+
+	<body>
+<div class="spinner"></div>
+<!--============================== header =================================-->
+<header>
+      <div class="container clearfix">
+    <div class="row">
+          <div class="span12">
+        <div class="navbar navbar_">
+              <div class="container">
+            <h1 class="brand brand_"><a href="index.html"><img alt="" src="img/ehonhouse-logo.png"> </a></h1>
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse_">メニュー<span class="icon-bar"></span> </a>
+            <div class="nav-collapse nav-collapse_  collapse">
+                  <ul class="nav sf-menu">
+                <li><a href="index.html">ホーム</a></li>
+                 <li><a href="index_new.html">新着</a></li>
+                <li><a href="index_rank.html">人気</a></li>
+                <li class="active"><a href="index_rogin.html">投稿</a></li>
+              </ul>
+                </div>
+          </div>
+            </div>
+      </div>
+        </div>
+  </div>
+    </header>
+<div class="bg-content"> 
+      
+      <!--============================== content =================================-->
+      
+      <div id="content"><div class="ic"></div>
+    <div class="container">
+          <div class="row">
+        <!--<div class="span12">-->
+        <article class="span2">
+        <div class="user_submit">
+        <font color="#000000"><p id="creator-author-name" class="js-profile-edit-button">nakkle13</p></font>
+        <img src="img/naoyasamune.jpg" width="60px" height="60px">
+<hr>
+    <font color="#000000"><div id="creator-favorite-counts">お気に入り<span>0</span></div></font>
+<hr>
+    <a class="js-profile-edit-button creator-profile-edit-button"><span>プロフィール編集</span></a>
+    <br>
+    <a id="js-twitter-button" class="creator-twitter-button"><span>twitter設定</span></a>
+      <div id="js-twitter-balloon" class="creator-button-balloon" style="display:none;">
+        <a id="js-twitter-cheer-setting"><span>応援ツイート設定</span></a>
+        <br>
+        <a id="js-twitter-contribute-setting"><span>更新お知らせ設定</span></a>
+        
+      </div>
+      <br>
+    <a id="js-creator-information-button" class="creator-information-button"><span>運営のお知らせ<span class="creator-information-new">NEW</span></span></a>
+
+    <div id="creator-account-button-wapper">
+      <a id="js-creator-account-button" class="creator-account-button-header">アカウント設定</a>
+      <div id="js-account-balloon" class="creator-button-balloon" style="display:none;">
+        <a id="js-password-edit-button" class="creator-password-edit-button"><span>パスワード変更</span></a>
+        <br>
+        <a id="js-mail-edit-button" class="creator-mail-edit-button"><span>メールアドレス変更</span></a>
+        <br>
+        <a href="/account/withdrawal/"><span>退会手続き</span></a>
+      </div>
+    </div>
+    </div>
+    </article>
+    <script>
+$(function() {
+
+
+
+
+
+  $("#js-creator-account-button").on("click touchstart", function(event){
+    event.preventDefault();
+
+    $("#js-account-balloon").toggle();
+    if($("#js-account-balloon").css("display")=='block'){
+      $("#js-creator-account-button").css({"opacity":0.7});
+    }else{
+      $("#js-creator-account-button").css({"opacity":1});
+    }
+
+  });
+  $("#js-twitter-button").on("click touchstart", function(event){
+    $("#js-twitter-balloon").toggle();
+  });
+  $(".js-profile-edit-button").on("click touchstart", function(event){
+    event.preventDefault();
+    $("<script type='text/javascript' charset='utf-8' src='https://image-a.mangabox.me/static/assets/js/creator/jquery.Jcrop.min.js?t=1395910689'></scri" + "pt>").appendTo("body");
+    $.fn.custombox({
+      url: '/author/2839/edit/'
+    });
+  });
+
+  $("#js-creator-information-button").on("click touchstart", function(event){
+    event.preventDefault();
+    
+    $.fn.custombox({
+      url: '/information/'
+    });
+  });
+
+  
+
+  $("#js-password-edit-button").on("click touchstart", function(event){
+    event.preventDefault();
+    $.fn.custombox({
+      url: '/account/password/change/'
+    });
+  });
+
+
+  $("#js-mail-edit-button").on("click touchstart", function(event){
+    event.preventDefault();
+    $.fn.custombox({
+      url: '/account/mail_address/change/'
+    });
+  });
+
+  $("#js-twitter-cheer-setting").on("click touchstart", function(event){
+    event.preventDefault();
+    $.fn.custombox({
+      url: '/account/twitter/settings/support_tweet/'
+    });
+  });
+  $("#js-twitter-contribute-setting").on("click touchstart", function(event){
+    event.preventDefault();
+    $.fn.custombox({
+      url: '/account/twitter/settings/update_tweet/'
+    });
+  });
+  $("#js-twitter-info-update").on("click touchstart", function(event){
+    event.preventDefault();
+    $.fn.custombox({
+      url: '/account/twitter/settings/basic_info/'
+    });
+  });
+
+
+
+
+
+
+});
+</script>
+            <article class="span10">
+            <button class="btn btn-lg btn-primary btn-block" style="margin:10px; padding:10px;" type="submit" onClick="location.href='index_submit_new.html'">作品を投稿する!!</button>
+            <div class="clear"></div>
+        <ul class="thumbnails thumbnails-1 list-services">
+              <li class="span4">
+            <div class="thumbnail thumbnail-1"> <img  src="img/gurigurabig.gif" alt="">
+                        	<div class="hyouka">
+            	<a href="index_gallary_gurigura.html" class="viewer_link">ぐりとぐら</a>
+            	<div class="iine-count"><img  src="img/heart.png" alt=" " width="28px" height="28px">8,282,455</div>
+				</div>
+             </div>
+          </li>
+          <li class="span4">
+            <div class="thumbnail thumbnail-1"> <img  src="img/sirokumabig.jpg" alt="">
+                        	<div class="hyouka">
+            	<a href="index_gallary.html" class="viewer_link">しろくまちゃんのほっとけーき</a>
+            	<div class="iine-count"><img  src="img/heart.png" alt=" " width="28px" height="28px">8,282,455</div>
+				</div>
+             </div>
+          </li>
+          <li class="span4">
+            <div class="thumbnail thumbnail-1"> <img  src="img/gurigurabig.gif" alt="">
+                        	<div class="hyouka">
+            	<a href="index_gallary_gurigura.html" class="viewer_link">ぐりとぐら</a>
+            	<div class="iine-count"><img  src="img/heart.png" alt=" " width="28px" height="28px">8,282,455</div>
+				</div>
+             </div>
+          </li>
+          <li class="span4">
+            <div class="thumbnail thumbnail-1"> <img  src="img/sirokumabig.jpg" alt="">
+                        	<div class="hyouka">
+            	<a href="index_gallary.html" class="viewer_link">しろくまちゃんのほっとけーき</a>
+            	<div class="iine-count"><img  src="img/heart.png" alt=" " width="28px" height="28px">8,282,455</div>
+				</div>
+             </div>
+          </li>
+          </article>
+            <!--</div>-->
+              </div>
+</div>
+</div>
+</div>
+</body>
+<!--============================== footer =================================-->
+<footer>
+      <div class="container clearfix">
+    <ul class="list-social pull-right">
+          <li><a class="icon-1" href="#"></a></li>
+          <li><a class="icon-2" href="#"></a></li>
+          <li><a class="icon-3" href="https://twitter.com/oswt"></a></li>
+          <li><a class="icon-4" href="#"></a></li>
+        </ul>
+   <!-- <div class="privacy pull-left">Website Template designed by <a href="http://store.templatemonster.com?aff=awdawd" target="_blank" rel="nofollow">TemplateMonster.com</a><br />Popular free web templates <a href="http://www.oswt.co.uk" target="_blank">at www.Oswt.co.uk</a></div>
+  </div>-->
+    </footer>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+</body>
+</html>

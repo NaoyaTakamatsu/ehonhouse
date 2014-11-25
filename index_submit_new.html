@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+	<title>えほんハウス:えほん投稿</title>
+	<meta charset="utf-8">
+	<link rel="icon" href="img/ehonhousefavicon.png" type="image/x-icon">
+	<link rel="shortcut icon" href="img/ehonhousefavicon.png" type="image/x-icon" />
+	<meta name="description" content="Your description">
+	<meta name="keywords" content="Your keywords">
+	<meta name="author" content="Your name">
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="css/responsive.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/superfish.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="js/jquery.cookie.js"></script>
+	<script type="text/javascript">if($(window).width()>1024){document.write("<"+"script src='js/jquery.preloader.js'></"+"script>");}	</script>
+	<script>		
+		 jQuery(window).load(function() {	
+		 $x = $(window).width();		
+	if($x > 1024)
+	{			
+	jQuery("#content .row").preloader();    }			 
+		
+		 jQuery('.spinner').animate({'opacity':0},1000,'easeOutCubic',function (){jQuery(this).css('display','none')});	
+  		  }); 
+					
+	</script>
+
+	<!--[if lt IE 8]>
+  		<div style='text-align:center'><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/img/upgrade.jpg"border="0"alt=""/></a></div>  
+ 	<![endif]-->
+	<!--[if (gt IE 9)|!(IE)]><!-->
+	<!--<![endif]-->
+	<!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <link rel="stylesheet" href="css/docs.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/ie.css" type="text/css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+  <![endif]-->
+	</head>
+
+	<body>
+<div class="spinner"></div>
+<!--============================== header =================================-->
+<header>
+      <div class="container clearfix">
+    <div class="row">
+          <div class="span12">
+        <div class="navbar navbar_">
+              <div class="container">
+            <h1 class="brand brand_"><a href="index.html"><img alt="" src="img/ehonhouse-logo.png"> </a></h1>
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse_">メニュー<span class="icon-bar"></span> </a>
+            <div class="nav-collapse nav-collapse_  collapse">
+                  <ul class="nav sf-menu">
+                <li><a href="index.html">ホーム</a></li>
+                 <li><a href="index_new.html">新着</a></li>
+                <li><a href="index_rank.html">人気</a></li>
+                <li class="active"><a href="index_rogin.html">投稿</a></li>
+              </ul>
+                </div>
+          </div>
+            </div>
+      </div>
+        </div>
+  </div>
+    </header>
+<div class="bg-content"> 
+      
+      <!--============================== content =================================-->
+      
+      <div id="content"><div class="ic"></div>
+    <div class="container">
+          <div class="row">
+        <article class="span12" style="border-style: solid ; border-width: 1px; border-radius: 10px; border-color: #000000; background:#e2bf86; padding:10px; margin:10px;">
+              <!--ログイン画面-->
+    <section id="creator-new-wrapper">
+   <h1 id="creator-new-title">絵本の登録</h1>
+
+     <form action='/manga/create/' enctype="multipart/form-data" method="POST">
+<input type="hidden" name="csrf_token" value="nefVz5NYBqPseKhXXvIW2nzci3FJKi2zY-grpUUm" />
+      <div id="creator-new-inner">
+
+         <input type="hidden" id="locale" name="" value="ja">
+         <h2 class="creator-new-flow-txt">絵本のタイトルを入力してください</h2>
+         
+         <input type="text" id="manga-title" name="title" class="creator-new-series-title" placeholder="絵本のタイトル" value="">
+
+         
+         <div class="creator-radio-wrapper"></div>
+         <script>
+           $(function() {
+             $('.creator-radio-label').hover(
+               function() {
+                 $(this).children(".creator-direction-balloon").show();
+               },
+               function() {
+                 $(this).children(".creator-direction-balloon").hide();
+               }
+             );
+           });
+         </script>
+
+         <hr>
+         <h2 class="creator-new-flow-txt">絵本の表紙画像を投稿してください</h2>
+           
+         <div id="creator-cover-upload-content">
+
+           <label for="creator-cover-upload" id="creator-cover-upload-button">表紙画像を選ぶ</label>
+           <div class="creator-cover-previews"></div>
+           <input type="file" id="creator-cover-upload" class="hidden" name="cover_image" value="" accept="image/jpg,image/jpeg,image/png">
+         </div>
+         <script>
+           if(window.FileReader){
+             $('input[type=file]').iPreview({
+               target: '#creator-cover-previews',
+               position: 'append',
+               container: '',
+               wrapper: '.creator-cover-previews',
+               class: 'creator-cover-thumbnail',
+               uploadAfter:function(length) {
+                 $('.creator-cover-previews').css({
+                   backgroundImage:'none'
+                 });
+               },
+             });
+           }else{
+              $('#creator-cover-upload').removeClass('hidden');
+              $('.creator-cover-previews').hide();
+           }
+         </script>
+         <hr>
+         <h2 class="creator-tag-setting">タグの設定</h2>
+	<p class="creator-tag-setting-notice">
+		・タグを設定することで、作品を見つけやすくなります<br>
+		・タグは<span class="creator-tag-setting-emphasize">3つ</span>まで設定できます
+	</p>
+	<div id="creator-tag-setting-label-wrapper">
+	
+		<label for="tag1" class="creator-tag-setting-label"><input type="checkbox" id="tag1" name="tag1" value="1"><span class="creator-tag-setting-label-name">4コマ</span></label>
+	
+		<label for="tag2" class="creator-tag-setting-label"><input type="checkbox" id="tag2" name="tag2" value="1"><span class="creator-tag-setting-label-name">BL・GL</span></label>
+	
+		<label for="tag3" class="creator-tag-setting-label"><input type="checkbox" id="tag3" name="tag3" value="1"><span class="creator-tag-setting-label-name">ギャグ</span></label>
+	
+		<label for="tag4" class="creator-tag-setting-label"><input type="checkbox" id="tag4" name="tag4" value="1"><span class="creator-tag-setting-label-name">青春</span></label>
+	
+		<label for="tag5" class="creator-tag-setting-label"><input type="checkbox" id="tag5" name="tag5" value="1"><span class="creator-tag-setting-label-name">シュール</span></label>
+	
+		<label for="tag6" class="creator-tag-setting-label"><input type="checkbox" id="tag6" name="tag6" value="1"><span class="creator-tag-setting-label-name">バトル</span></label>
+	
+		<label for="tag7" class="creator-tag-setting-label"><input type="checkbox" id="tag7" name="tag7" value="1"><span class="creator-tag-setting-label-name">ファンタジー</span></label>
+	
+		<label for="tag8" class="creator-tag-setting-label"><input type="checkbox" id="tag8" name="tag8" value="1"><span class="creator-tag-setting-label-name">ほのぼの</span></label>
+	
+		<label for="tag9" class="creator-tag-setting-label"><input type="checkbox" id="tag9" name="tag9" value="1"><span class="creator-tag-setting-label-name">ホラー</span></label>
+	
+		<label for="tag10" class="creator-tag-setting-label"><input type="checkbox" id="tag10" name="tag10" value="1"><span class="creator-tag-setting-label-name">学園</span></label>
+	
+		<label for="tag11" class="creator-tag-setting-label"><input type="checkbox" id="tag11" name="tag11" value="1"><span class="creator-tag-setting-label-name">更新遅い</span></label>
+	
+		<label for="tag12" class="creator-tag-setting-label"><input type="checkbox" id="tag12" name="tag12" value="1"><span class="creator-tag-setting-label-name">切ない</span></label>
+	
+		<label for="tag13" class="creator-tag-setting-label"><input type="checkbox" id="tag13" name="tag13" value="1"><span class="creator-tag-setting-label-name">1話読み切り</span></label>
+	
+		<label for="tag14" class="creator-tag-setting-label"><input type="checkbox" id="tag14" name="tag14" value="1"><span class="creator-tag-setting-label-name">日常</span></label>
+	
+		<label for="tag15" class="creator-tag-setting-label"><input type="checkbox" id="tag15" name="tag15" value="1"><span class="creator-tag-setting-label-name">更新早い</span></label>
+	
+		<label for="tag16" class="creator-tag-setting-label"><input type="checkbox" id="tag16" name="tag16" value="1"><span class="creator-tag-setting-label-name">恋愛</span></label>
+	
+		<label for="tag17" class="creator-tag-setting-label"><input type="checkbox" id="tag17" name="tag17" value="1"><span class="creator-tag-setting-label-name">シリアス</span></label>
+	
+		<label for="tag19" class="creator-tag-setting-label"><input type="checkbox" id="tag19" name="tag19" value="1"><span class="creator-tag-setting-label-name">完結</span></label>
+	
+		<label for="tag20" class="creator-tag-setting-label"><input type="checkbox" id="tag20" name="tag20" value="1"><span class="creator-tag-setting-label-name">スポーツ</span></label>
+	
+		<label for="tag21" class="creator-tag-setting-label"><input type="checkbox" id="tag21" name="tag21" value="1"><span class="creator-tag-setting-label-name">運営への挑戦状</span></label>
+	
+		<label for="tag22" class="creator-tag-setting-label"><input type="checkbox" id="tag22" name="tag22" value="1"><span class="creator-tag-setting-label-name">インディーズ限定公開</span></label>
+	</div>
+         <hr>
+         <h2 class="creator-comment-setting">コメントの設定</h2>
+         <div class="creator-radio-wrapper">
+           <span class="creator-radio-txt">この絵本へのコメントを</span>
+           <br>
+           <input type="radio" name="comment_enabled" value="1" id="creator-radio-comment-yes" class="creator-radio" checked>
+           <label for="creator-radio-comment-yes" class="creator-radio-label">
+             <span class="creator-radio-label-comment">可能にする</span>
+           </label>
+           <br>
+           <input type="radio" name="comment_enabled" value="0" id="creator-radio-comment-no" class="creator-radio">
+           <label for="creator-radio-comment-no" class="creator-radio-label">
+             <span class="creator-radio-label-comment">ブロックする</span>
+           </label>
+         </div>
+     </div><!--/creator-new-inner-->
+             <div class="creator-upload-bottom-wapper">
+        </div>
+     </form>
+     <a id="creator-back-button"><span>前に戻る</span></a>
+            <!--type="submit"formmethod="post" formtype="_self" id="creator-next-button" このへんいるかも？？-->
+           <button class="btn btn-lg btn-primary btn-block" type="submit" onClick="location.href='index_submit_new_toukou.html'">登録を完了する</button>
+        </div>
+</div>
+</div>
+</body>
+<!--============================== footer =================================-->
+<footer>
+      <div class="container clearfix">
+    <ul class="list-social pull-right">
+          <li><a class="icon-1" href="#"></a></li>
+          <li><a class="icon-2" href="#"></a></li>
+          <li><a class="icon-3" href="https://twitter.com/oswt"></a></li>
+          <li><a class="icon-4" href="#"></a></li>
+        </ul>
+   <!-- <div class="privacy pull-left">Website Template designed by <a href="http://store.templatemonster.com?aff=awdawd" target="_blank" rel="nofollow">TemplateMonster.com</a><br />Popular free web templates <a href="http://www.oswt.co.uk" target="_blank">at www.Oswt.co.uk</a></div>
+  </div>-->
+    </footer>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+</body>
+</html>

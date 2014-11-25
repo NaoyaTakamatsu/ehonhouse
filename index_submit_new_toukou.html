@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+	<title>えほんハウス:えほんページ投稿</title>
+	<meta charset="utf-8">
+	<link rel="icon" href="img/ehonhousefavicon.png" type="image/x-icon">
+	<link rel="shortcut icon" href="img/ehonhousefavicon.png" type="image/x-icon" />
+	<meta name="description" content="Your description">
+	<meta name="keywords" content="Your keywords">
+	<meta name="author" content="Your name">
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="css/responsive.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/superfish.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="js/jquery.cookie.js"></script>
+	<script type="text/javascript">if($(window).width()>1024){document.write("<"+"script src='js/jquery.preloader.js'></"+"script>");}	</script>
+	<script>		
+		 jQuery(window).load(function() {	
+		 $x = $(window).width();		
+	if($x > 1024)
+	{			
+	jQuery("#content .row").preloader();    }			 
+		
+		 jQuery('.spinner').animate({'opacity':0},1000,'easeOutCubic',function (){jQuery(this).css('display','none')});	
+  		  }); 
+					
+	</script>
+
+	<!--[if lt IE 8]>
+  		<div style='text-align:center'><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/img/upgrade.jpg"border="0"alt=""/></a></div>  
+ 	<![endif]-->
+	<!--[if (gt IE 9)|!(IE)]><!-->
+	<!--<![endif]-->
+	<!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <link rel="stylesheet" href="css/docs.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/ie.css" type="text/css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+  <![endif]-->
+	</head>
+
+	<body>
+<div class="spinner"></div>
+<!--============================== header =================================-->
+<header>
+      <div class="container clearfix">
+    <div class="row">
+          <div class="span12">
+        <div class="navbar navbar_">
+              <div class="container">
+            <h1 class="brand brand_"><a href="index.html"><img alt="" src="img/ehonhouse-logo.png"> </a></h1>
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse_">メニュー<span class="icon-bar"></span> </a>
+            <div class="nav-collapse nav-collapse_  collapse">
+                  <ul class="nav sf-menu">
+                <li><a href="index.html">ホーム</a></li>
+                 <li><a href="index_new.html">新着</a></li>
+                <li><a href="index_rank.html">人気</a></li>
+                <li class="active"><a href="index_rogin.html">投稿</a></li>
+              </ul>
+                </div>
+          </div>
+            </div>
+      </div>
+        </div>
+  </div>
+    </header>
+<div class="bg-content"> 
+      <!--============================== content =================================-->
+      
+      <div id="content"><div class="ic"></div>
+    <div class="container">
+          <div class="row">
+        <article class="span12" style="border-style: solid ; border-width: 1px; border-radius: 10px; border-color: #000000; background:#e2bf86; padding:10px; margin:10px;">
+    <div id="creator-edit-wrapper">
+
+
+  <div class="creator-topicpath">
+    <a href="/manga/" class="creator-topicpath-link"><span>作品一覧</span></a>
+    <a href="/manga/2361/edit/" class="creator-topicpath-link"><span>ぐりとぐら</span></a>
+    <span></span>
+  </div>
+
+
+      <div id="creator-edit-inner">
+
+        <input type="hidden" id="content-id" name="content_id" class="episode-txt-input" value="0">
+        <input type="hidden" id="episode-locale" name="" value="ja">
+        <input type="hidden" id="update-type" name="action_type" value="">
+        <input type="hidden" id="manga-id" name="manga_id" value="2361">
+        <input type="hidden" name="volume" value="1">
+	
+	<label id="creator-orientation-label" data-orientation-label="horizontal" style="display:none;"></label>
+
+        <div id="creator-edit-episode-info">
+          <div id="creator-edit-episode-thum">
+          <img src="img/gurigurasmall.gif" alt=""  width="100" height="100"/>
+            <!--<img src="https://img-indies-a.mangabox.me/static/assets/images/pc/ja/creator/common/default_cover.png" width="80" height="80">-->
+          </div>
+          <div id="creator-edit-episode-title-wrapper">
+            <span id="creator-edit-episode-title">ぐりとぐら</span>
+          </div>
+        </div><!--/creator-edit-episode-info-->
+
+        <hr>
+        <label for="creator-update-input" class="creator-edit-page-select-button js-episode-edit-button">原稿を追加する</label>
+
+        <p class="creator-edit-flow-note">※jpg又は、pngデータを投稿してください（フルカラーの場合はjpgを推奨）。<br><br>
+※推奨画像サイズは横読みの場合は、横800px、縦1200px<br>※アップロードの際は、推奨画像サイズにして頂くか、適切な縦横比にしてください。
+        </p>
+
+
+
+        <input type="file" id="creator-update-input" name="image_file" class="creator-update-input hidden" value="1" accept="image/jpg,image/jpeg,image/png" multiple>
+        
+        <div class="js-creator-after-show" style="display:none;">
+          <hr>
+          <div class="creator-edit-flow-txt">投稿した原稿一覧</div>
+          <p class="creator-edit-flow-note" style="text-align:center;">原稿の順番は各ページ右上のボタン又は、ドラッグで変更できます。</p>
+        </div>
+
+
+        <ul id="creator-update-pages" class="ui-widget">
+        
+        </ul>
+
+
+        <div class="js-creator-after-show" style="display:none;">
+          <label for="creator-update-input" id="creator-update-button" class="js-episode-edit-button"></label>
+        <p class="creator-edit-flow-note">※jpg又はpng画像をアップロードしてください（フルカラーの場合はjpgを推奨）。<br><br>※推奨画像サイズは横読みの場合は、横800px、縦1200px<br>※アップロードの際は、推奨画像サイズにして頂くか、適切な縦横比にしてください。</p>
+        </div>
+
+
+          <div class="js-creator-after-show"  style="display:none;">
+            <hr>
+            <div class="creator-radio-wrapper">
+              <span class="creator-radio-text">1ページ目は、</span>
+              <input type="radio" name="position" value="right" id="creator-startpage-open" class="creator-radio-open" >
+              <label for="creator-startpage-open" class="creator-radio-label"><span>右</span>からスタート</label>
+              <input type="radio" name="position" value="left" id="creator-startpage-close" class="creator-radio-close" >
+              <label for="creator-startpage-close" class="creator-radio-label"><span>左</span>からスタート</label>
+            </div>
+          </div>
+
+       </div><!--creator-edit-inner-->
+
+       <p class="creator-edit-notice">登録する前に<a href="/info/rule/" target="_blank">投稿のルール</a>をお読みください。</p>
+
+  </div><!--creator-edit-wrapper-->
+
+  <div id="creator-edit-button-position">
+    <div id="creator-edit-button-container">
+      <div id="creator-edit-button-wrapper">
+
+        <!--<button class="disable js-episode-edit-button" disabled type="submit" formmethod="post" formtype="_self" id="creator-submit-button">編集の完了</button>-->
+        <button class="btn btn-lg btn-primary btn-block" type="submit" onClick="location.href='index_submit.html'">編集の完了</button>
+        <a class="disable js-episode-edit-button" data-href="/info/preview/" id="creator-preview-button">ビューアで確認</a><!--/episode//viewer/-->
+<!--
+        <div id="creator-publish-wrapper">
+          <span class="creator-publish-text">この話を公開</span>
+          <input type="radio" name="public_st" value="1" id="creator-publish-open" class="creator-publish-radio" >
+          <!--<label for="creator-publish-open" class="creator-publish-label">公開</label>-->
+         <!-- <br>
+          <input type="radio" name="public_st" value="0" id="creator-publish-close" class="creator-publish-radio" checked>
+          <label for="creator-publish-close" class="creator-publish-label">今は公開しない</label>-->
+
+
+        </div>
+
+        <a href="/manga/2361/edit/" class="creator-back-button">戻る</a>
+
+      </div>
+    </div>
+  </div>
+</form>
+
+
+<section id="js-custombox-public-update-open" class="custombox-public-update" style="display:none;">
+  <form action="" method="POST">
+<input type="hidden" name="csrf_token" value="nefVz5NYBqPseKhXXvIW2nzci3FJKi2zY-grpUUm" />
+    <p class="custombox-public-update-txt">ぐりとぐらを公開にします。<br>よろしいですか？</p>
+    <a class="custombox-public-update-no" onclick="$.fn.custombox('close');">いいえ</a>
+    <input type="hidden" name="public_st" value="1">
+    <button class="custombox-public-update-yes">はい</button>
+  </form>
+
+
+</section>
+
+<section id="js-custombox-public-update-close" class="custombox-public-update" style="display:none;">
+  <form action="" method="POST">
+<input type="hidden" name="csrf_token" value="nefVz5NYBqPseKhXXvIW2nzci3FJKi2zY-grpUUm" />
+    <p class="custombox-public-update-txt">ぐりとぐらを非公開にします。<br>よろしいですか？</p>
+    <a class="custombox-public-update-no" onclick="$.fn.custombox('close');">いいえ</a>
+    <input type="hidden" name="public_st" value="0">
+    <button class="custombox-public-update-yes">はい</button>
+  </form>
+</section>
+
+<script>
+$(function() {
+  $('#js-custombox-public-update-open > form').on('submit', function(e) {
+      e.preventDefault();
+      var $jqxhr = $.ajax({
+          url: '/manga/2361/episode//edit/public_status/',
+          cache: false,
+          type: 'POST',
+          processData: false,
+          data: $(this).serialize(),
+          success: function(data, message, jqxhr) {
+              alert("成功");
+              $.fn.custombox('close');
+          },
+          error: function(jqxhr, message, error) {
+              alert("エラー");
+              $.fn.custombox('close');
+          }
+      });
+  });
+
+  $('#js-custombox-public-update-close > form').on('submit', function(e) {
+      e.preventDefault();
+      var $jqxhr = $.ajax({
+          url: '/manga/2361/episode//edit/public_status/',
+          cache: false,
+          type: 'POST',
+          processData: false,
+          data: $(this).serialize(),
+          success: function(data, message, jqxhr) {
+              alert("成功");
+              $.fn.custombox('close');
+          },
+          error: function(jqxhr, message, error) {
+              alert("エラー");
+              $.fn.custombox('close');
+          }
+      });
+  });
+
+
+  $('#creator-public-open').change(function(){
+    $.fn.custombox({
+      url: '#js-custombox-public-update-open'
+    });
+  });
+  $('#creator-public-close').change(function(){
+    $.fn.custombox({
+      url: '#js-custombox-public-update-close'
+    });
+  });
+
+
+});
+</script>
+
+<section id="js-custombox-volume" class="custombox-nomal-container" style="display:none;">
+  <form id="creator-edit-volume-form" method="POST">
+<input type="hidden" name="csrf_token" value="nefVz5NYBqPseKhXXvIW2nzci3FJKi2zY-grpUUm" />
+     <p class="custombox-nomal-txt">話数を変更しますか</p>
+     <input type="text" name="volume" value="">
+     <a class="custombox-nomal-no" onclick="$.fn.custombox('close');">いいえ</a>
+    <button class="custombox-nomal-yes">はい</button>
+  </form>
+</section>
+
+
+
+<div id="js-page-loading" class="creator-loading-wrapper" style="display:none;">
+  <div class="creator-loading-content">
+    <img src="https://image-a.mangabox.me/static/assets/images/pc/ja/creator/loading.gif?t=1395910689" alt="loading..." width="60" height="60">
+    <p>loading...</p>
+  </div>
+</div>
+
+
+<script src="https://image-a.mangabox.me/static/assets/js/creator/sortable.js?t=1395910689"></script>
+<script src="https://image-a.mangabox.me/static/assets/js/creator/jquery.pageEdit.min.js?t=1412751010"></script>
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46141432-2', 'mangabox.me');
+  ga('send', 'pageview');
+
+</script>
+</div>
+</div>
+</div>
+</body>
+<!--============================== footer =================================-->
+<footer>
+      <div class="container clearfix">
+    <ul class="list-social pull-right">
+          <li><a class="icon-1" href="#"></a></li>
+          <li><a class="icon-2" href="#"></a></li>
+          <li><a class="icon-3" href="https://twitter.com/oswt"></a></li>
+          <li><a class="icon-4" href="#"></a></li>
+        </ul>
+   <!-- <div class="privacy pull-left">Website Template designed by <a href="http://store.templatemonster.com?aff=awdawd" target="_blank" rel="nofollow">TemplateMonster.com</a><br />Popular free web templates <a href="http://www.oswt.co.uk" target="_blank">at www.Oswt.co.uk</a></div>
+  </div>-->
+    </footer>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+</body>
+</html>

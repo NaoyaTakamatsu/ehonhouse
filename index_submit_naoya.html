@@ -1,0 +1,580 @@
+
+
+<!doctype html>
+
+<!--[if IE ]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml"><![endif]--> 
+<!--[if !(IE)]><!--><html lang="ja" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml"><!--<![endif]-->
+
+
+<head>
+  <meta charset="utf-8">
+  <title>えほんハウス:ユーザー投稿画面</title>
+  <meta name="description" content="オリジナル漫画を投稿・閲覧可能な「マンガボックスインディーズ」！投稿はPCから、閲覧は「マンガボックス」アプリから可能！マンガボックス編集部からスカウトされればマンガボックスで作品掲載できる可能性も！今なら賞金が貰えるマンガボックスリーグ開催中！">
+  <meta property="og:title" content="マンガボックス インディーズ(MangaBox Indies)">
+  <meta property="og:description" content="オリジナル漫画を投稿・閲覧可能な「マンガボックスインディーズ」！投稿はPCから、閲覧は「マンガボックス」アプリから可能！マンガボックス編集部からスカウトされればマンガボックスで作品掲載できる可能性も！今なら賞金が貰えるマンガボックスリーグ開催中！">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:site_name" content="マンガボックス インディーズ(MangaBox Indies)">
+  <meta property="fb:app_id" content="193592954158347">
+
+  <meta name="keywords" content="同人誌,同人販売,マンガ投稿,マンガコンテスト,連載権">
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  
+  
+  
+    <!--<link rel="stylesheet" href="https://image-a.mangabox.me/static/assets/css/pc/ja/creator/edit.css?t=1412751010">-->
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+
+
+  <script src="https://image-a.mangabox.me/static/assets/js/jquery-1.9.1.min.js?t=1383817241"></script>
+  <script src="https://image-a.mangabox.me/static/assets/js/creator/jquery.custombox.min.js?t=1406276601"></script>
+  <script src="https://image-a.mangabox.me/static/assets/js/sp/jquery.cookie.min.js?t=1397820893"></script>
+  
+  <!--[if lt IE 9]>
+  <script src="https://image-a.mangabox.me/static/assets/js/html5.js?t=1383817241"></script>
+  <![endif]-->
+
+  <link rel="shortcut icon" href="https://image-a.mangabox.me/static/assets/images/pc/ja/creator/favicon.ico?t=1395910689">
+</head>
+<body>
+
+
+<div id="js-page-loading" class="creator-loading-wrapper" style="display:none;">
+  <div class="creator-loading-content">
+    <img src="https://image-a.mangabox.me/static/assets/images/pc/ja/creator/loading.gif?t=1395910689" alt="loading..." width="60" height="60">
+    <p>loading...</p>
+  </div>
+</div>
+
+<header id="creator-common-header">
+  <h1><a id="creator-logo" href="/manga/">マンガボックスインディーズ</a></h1>
+  
+  <a href="/manga/" id="creator-series-link">シリーズ一覧</a>
+  <a href="/account/logout/" id="creator-logout-link">ログアウト</a>
+  <a href="/info/question/" id="creator-question-link" target="_blank">よくある質問</a>
+  <a class="creator-new-link" href="https://www-indies.mangabox.me/">投稿された作品を読む</a>
+</header>
+<section id="creator-author-wrapper">
+    <div class="js-profile-edit-button creator-author-pic-wrapper"><div class="creator-author-pic" style="background-image:url('https://image-a.mangabox.me/static/assets/images/pc/ja/creator/manga/profile_thum.png?t=1395910689');"></div></div>
+    <p id="creator-author-name" class="js-profile-edit-button">nakkle13</p>
+<hr>
+    <div id="creator-read-counts">閲読数<span>0</span></div>
+    <div id="creator-favorite-counts">お気に入り<span>0</span></div>
+<hr>
+    <a class="js-profile-edit-button creator-profile-edit-button"><span>プロフィール編集</span></a>
+    <a id="js-twitter-button" class="creator-twitter-button"><span>twitter設定</span></a>
+      <div id="js-twitter-balloon" class="creator-button-balloon" style="display:none;">
+        <a id="js-twitter-cheer-setting"><span>応援ツイート設定</span></a>
+        <a id="js-twitter-contribute-setting"><span>更新お知らせ設定</span></a>
+        
+      </div>
+    <a id="js-creator-information-button" class="creator-information-button"><span>運営のお知らせ<span class="creator-information-new">NEW</span></span></a>
+
+    <div id="creator-account-button-wapper">
+      <a id="js-creator-account-button" class="creator-account-button-header">アカウント設定</a>
+      <div id="js-account-balloon" class="creator-button-balloon" style="display:none;">
+        <a id="js-password-edit-button" class="creator-password-edit-button"><span>パスワード変更</span></a>
+        <a id="js-mail-edit-button" class="creator-mail-edit-button"><span>メールアドレス変更</span></a>
+        <a href="/account/withdrawal/"><span>退会手続き</span></a>
+      </div>
+    </div>
+
+</section>
+
+<section class="custombox-twitter-container" id="js-twitter-registration-failed-notice" style="display:none;">
+    <h1 class="custombox-nomal-title">Twitter設定<a class="custombox-nomal-close" onclick="$.fn.custombox('close');">キャンセル</a></h1>
+    <div id="js-twitter-info-index" class="custombox-twitter-inner">
+        <p class="custombox-twitter-txt">Twitter連携処理が失敗したか、キャンセルされました。時間置いてから再度お試しください。</p>
+
+    <a class="custombox-twitter-close" onclick="$.fn.custombox('close');">閉じる</a>
+    </div>
+  </div>
+</section>
+
+<script>
+$(function() {
+
+
+
+
+
+  $("#js-creator-account-button").on("click touchstart", function(event){
+    event.preventDefault();
+
+    $("#js-account-balloon").toggle();
+    if($("#js-account-balloon").css("display")=='block'){
+      $("#js-creator-account-button").css({"opacity":0.7});
+    }else{
+      $("#js-creator-account-button").css({"opacity":1});
+    }
+
+  });
+  $("#js-twitter-button").on("click touchstart", function(event){
+    $("#js-twitter-balloon").toggle();
+  });
+  $(".js-profile-edit-button").on("click touchstart", function(event){
+    event.preventDefault();
+    $("<script type='text/javascript' charset='utf-8' src='https://image-a.mangabox.me/static/assets/js/creator/jquery.Jcrop.min.js?t=1395910689'></scri" + "pt>").appendTo("body");
+    $.fn.custombox({
+      url: '/author/2839/edit/'
+    });
+  });
+
+  $("#js-creator-information-button").on("click touchstart", function(event){
+    event.preventDefault();
+    
+    $.fn.custombox({
+      url: '/information/'
+    });
+  });
+
+  
+
+  $("#js-password-edit-button").on("click touchstart", function(event){
+    event.preventDefault();
+    $.fn.custombox({
+      url: '/account/password/change/'
+    });
+  });
+
+
+  $("#js-mail-edit-button").on("click touchstart", function(event){
+    event.preventDefault();
+    $.fn.custombox({
+      url: '/account/mail_address/change/'
+    });
+  });
+
+  $("#js-twitter-cheer-setting").on("click touchstart", function(event){
+    event.preventDefault();
+    $.fn.custombox({
+      url: '/account/twitter/settings/support_tweet/'
+    });
+  });
+  $("#js-twitter-contribute-setting").on("click touchstart", function(event){
+    event.preventDefault();
+    $.fn.custombox({
+      url: '/account/twitter/settings/update_tweet/'
+    });
+  });
+  $("#js-twitter-info-update").on("click touchstart", function(event){
+    event.preventDefault();
+    $.fn.custombox({
+      url: '/account/twitter/settings/basic_info/'
+    });
+  });
+
+
+
+
+
+
+});
+</script>
+
+
+<section id="creator-right-wrapper">
+  <div id="creator-right-inner">
+
+    <div class="creator-topicpath">
+      <a href="/manga/" class="creator-topicpath-link"><span>シリーズ一覧</span></a>
+      <span class="creator-topicpath-here"><span>意識高系研究室生活</span></span>
+      <span></span>
+    </div>
+
+    <div id="creator-series-info">
+	<div id="creator-series-info-left">
+		<form id="js-custombox-cover-form" action=/manga/2361/edit/cover_image/ method="POST" onsubmit="return false">
+<input type="hidden" name="csrf_token" value="nefVz5NYBqPseKhXXvIW2nzci3FJKi2zY-grpUUm" />
+		<label for="manga-cover-upload"><div class="creator-manga-thumbnail" id="cover-image-wrapper">
+		  <img src="https://img-indies-a.mangabox.me/static/assets/images/pc/ja/creator/common/default_cover.png" width="80" height="80">
+		</div>
+		<input type="file" id="manga-cover-upload" class="hidden" name="cover_image" value="" accept="image/jpg,image/jpeg,image/png">
+		</label>
+		</form>
+		<span class="creator-manga-orientation-h">横読み</span>
+		
+	</div>
+
+      <div class="creator-manga-title">
+		<span id="creator-title-edit" class="creator-title-edit">
+			意識高系研究室生活
+		</span><span class="creator-manga-volume">全0話</span>
+		<div id="creator-series-info-setting-button">
+			<a id="creator-comment-enabled-setting" class="creator-btn-comment-setting-on">コメントの設定</a>
+			<div id="creator-tag-setting-wrapper">
+				<a id="creator-tag-setting" class="creator-tag-setting-on">タグの設定</a>
+				
+				  
+				  <span class="creator-tag-label">#シュール</span>
+				  
+				
+			</div>
+		</div>
+
+		<span class="creator-manga-views">閲読数 :<span>0</span></span>
+		<span class="creator-manga-favorites">お気に入り :<span>0</span></span>
+		<a id="creator-delete-series" data-url=/manga/2361/delete/>シリーズを削除</a>
+      </div>
+
+
+    </div><!--/creator-series-info-->
+
+
+    <div id="js-creator-overview-offset"></div>
+    <div id="js-episode-add-btn" class="episode-add-btn creator-upload-button-wrapper"><a href=/manga/2361/episode/new/ id="creator-episode-upload-button"><span>エピソードの投稿</span></a></div>
+
+    
+        <ul id="js-creator-overview" class="creator-overview">
+          <li>
+            <div class="creator-overview-grid">
+              <div class="creator-overview-grid-img"><a href="/manga/2361/episode/new/"><img src="https://image-a.mangabox.me/static/assets/images/pc/ja/creator/manga/zero2.png?t=1395910689" alt="ストーリーを追加" width="162" height="162"></a></div>
+            </div>
+          </li>
+        </ul>
+    
+
+  </div>
+</section>
+
+
+<section id="js-custombox-cover-image" class="custombox-nomal-container02" style="display:none;">
+    <div id="custombox-cover-image-edit-wrapper">
+        <h1 class="custombox-nomal-title">表紙画像の変更</h1>
+        <div id="creator-cover-previews"></div>
+        <p class="custombox-public-update-txt">を表示します。よろしいですか？</p>
+        <a class="custombox-public-update-no" onclick="$.fn.custombox('close');">いいえ</a>
+        <button type="button" class="custombox-public-update-yes" onclick="return editCover($('#manga-cover-upload').get(0).form)">はい</button>
+    </div>
+</section>
+<script src="https://image-a.mangabox.me/static/assets/js/creator/jquery.iPreview.min.js?t=1395910689"></script>
+<script>
+
+function cover_image_change(){
+     $.fn.custombox({
+       url: '#js-custombox-cover-image'
+     });
+}
+$(function() {
+
+  if(window.FileReader){
+      $('input[type=file]#manga-cover-upload').iPreview({
+          target: '#creator-cover-previews',
+          position: 'append',
+          container: '',
+          wrapper: '#creator-cover-previews',
+          class: 'creator-cover-thumbnail',
+          uploadAfter:function(length) {
+            cover_image_change();
+          }
+      });
+  }else{
+    $('#manga-cover-upload').attr("onchange","cover_image_change()");
+    $('#manga-cover-upload').removeClass('hidden');
+  }
+});
+</script>
+
+
+<section id="js-custombox-title-edit" class="custombox-title-edit" style="display:none;">
+    <div id="custombox-title-edit-wrapper">
+    <form id="custombox-title-form-id" class="custombox-title-form" action=/manga/2361/edit/title/  onsubmit="return false" method=POST enctype="multipart/form-data">
+<input type="hidden" name="csrf_token" value="nefVz5NYBqPseKhXXvIW2nzci3FJKi2zY-grpUUm" />
+        <p class="custombox-title-edit-txt">シリーズのタイトルを</p>
+        <input type="text" id="title-edit" name="title" value="意識高系研究室生活">
+        <p class="custombox-title-edit-txt">に変更します。よろしいですか？</p>
+        <a class="custombox-title-edit-no" onclick="$.fn.custombox('close');">キャンセル</a>
+        <!--input type="hidden" name="title" value=""-->
+        <button type="submit" onclick="return editTitle(this.form)" class="custombox-title-edit-yes">変更する</button>
+    </form>
+    </div>
+
+    <div id="custombox-title-error" style="display:none;">
+        <p id="custombox-title-error-text" class="custombox-error-text"></p>
+        <a onclick="$.fn.custombox('close');" class="custombox-title-edit-no">閉じる</a>
+    </div>
+</section>
+
+<section id="js-custombox-delete" class="custombox-nomal-container" style="display:none;">
+  <div id="js-episode-delete">
+    <p class="custombox-nomal-txt" style="text-align:left;">意識高系研究室生活（第<span class="js-episode-delete-volume"></span>話）を削除してもよろしいですか？<br>※投稿されたコメントも一緒に削除されます。</p>
+    <a class="custombox-nomal-no" onclick="$.fn.custombox('close');">キャンセル</a>
+    <a id="js-episode-delete-confirm-button" class="custombox-nomal-del">削除する</a>
+  </div>
+  <div id="js-episode-delete-confirm" style="display:none;">
+    <p class="custombox-nomal-txt" style="text-align:left;">意識高系研究室生活（第<span class="js-episode-delete-volume"></span>話）を本当に削除してもよろしいですか？<br>※投稿されたコメントも一緒に削除されます。</p>
+    <form action="" method="POST" id="js-custombox-delete-form">
+<input type="hidden" name="csrf_token" value="nefVz5NYBqPseKhXXvIW2nzci3FJKi2zY-grpUUm" />
+      <a class="custombox-nomal-no" onclick="$.fn.custombox('close');">キャンセル</a>
+      <input type="hidden" name="delete" value="1">
+      <input type="hidden" name="url" id="custombox-delete-url">
+      <button class="custombox-nomal-del">削除する</button>
+    </form>
+  </div>
+
+<script>
+$(function() {
+    $('#js-episode-delete-confirm-button').on("click touchstart", function(event){
+      $('#js-episode-delete').hide();
+      $('#js-episode-delete-confirm').show();
+    });
+    $('form#js-custombox-delete-form').on('submit', function(e) {
+        e.preventDefault();
+        var $jqxhr = $.ajax({
+            url: $('#custombox-delete-url').val(),
+            cache: false,
+            type: 'POST',
+            processData: false,
+            data: $(this).serialize(),
+            success: function(data, message, jqxhr) {
+                location.reload();
+            },
+            error: function(jqxhr, message, error) {
+                alert("エラー");
+                $.fn.custombox('close');
+            }
+        });
+    });
+});
+</script>
+</section>
+
+
+<section id="js-custombox-delete-series" class="custombox-nomal-container" style="display:none;">
+  <div id="js-series-delete">
+    <p class="custombox-nomal-txt" style="text-align:left;">意識高系研究室生活シリーズおよび、全てのエピソードを削除してもよろしいですか？</p>
+    <a class="custombox-nomal-no" onclick="$.fn.custombox('close');">キャンセル</a><a id="js-series-delete-confirm-button" class="custombox-nomal-del">削除する</a>
+  </div>
+  <div id="js-series-delete-confirm" style="display:none;">
+    <p class="custombox-nomal-txt" style="text-align:left;">意識高系研究室生活シリーズおよび、全てのエピソードを本当に削除してもよろしいですか？<br>※投稿されたコメントも一緒に削除されます。</p>
+    <form action="" method="POST" id="js-custombox-series-delete-form">
+<input type="hidden" name="csrf_token" value="nefVz5NYBqPseKhXXvIW2nzci3FJKi2zY-grpUUm" />
+      <a class="custombox-nomal-no" onclick="$.fn.custombox('close');">キャンセル</a>
+      <input type="hidden" name="delete" value="1">
+      <input type="hidden" name="url" id="custombox-series-delete-url">
+      <button class="custombox-nomal-del">削除する</button>
+    </form>
+  </div>
+
+<script>
+$(function() {
+    $('#js-series-delete-confirm-button').on("click touchstart", function(event){
+      $('#js-series-delete').hide();
+      $('#js-series-delete-confirm').show();
+    });
+    $('form#js-custombox-series-delete-form').on('submit', function(e) {
+        e.preventDefault();
+        var $jqxhr = $.ajax({
+            url: $('#custombox-series-delete-url').val(),
+            cache: false,
+            type: 'POST',
+            processData: false,
+            data: $(this).serialize(),
+            success: function(data, message, jqxhr) {
+                location.href = "/manga/";
+            },
+            error: function(jqxhr, message, error) {
+                alert("エラー");
+                $.fn.custombox('close');
+            }
+        });
+    });
+});
+</script>
+</section>
+
+
+<script>
+
+
+function editTitle(form) {
+    var form_data = new FormData();
+    form_data.append('csrf_token', form.csrf_token.value);
+    form_data.append('title', form.title.value);
+
+    var $jqxhr = $.ajax({
+        url: '/manga/2361/edit/title/',
+        cache: false,
+        type: 'POST',
+        contentType: false,
+        processData: false,
+        data: form_data,
+        success: function(data, message, jqxhr) {
+            if (data['error']) {
+                $('#custombox-title-edit-wrapper').css('display', 'none');
+                $('#custombox-title-error > p').text(data['error']);
+                $('#custombox-title-error').css('display', 'block');
+                return;
+            }
+            location.reload();
+        },
+        error: function(jqxhr, message, error) {
+            alert(message);
+        }
+    });
+}
+
+function editCover(form) {
+    var form_data = new FormData(form);
+
+    var $jqxhr = $.ajax({
+        url: '/manga/2361/edit/cover_image/',
+        cache: false,
+        type: 'POST',
+        contentType: false,
+        processData: false,
+        data: form_data,
+        success: function(data, message, jqxhr) {
+            if (data['error']) {
+                alert(data['error']);
+                return;
+            }
+            location.reload();
+        },
+        error: function(jqxhr, message, error) {
+            alert(message);
+            $.fn.custombox('close');
+        }
+    });
+}
+
+function editTags(form) {
+    var form_data = new FormData();
+    form_data.append('csrf_token', $('#custombox-tag-setting-form-id').find('input[name=csrf_token]').val());
+    $('#custombox-tag-setting-form-id').find('input[type=checkbox]:checked').each(function(){
+        form_data.append($(this).attr('name'), 1);
+    });
+
+    var $jqxhr = $.ajax({
+        url: '/manga/2361/edit/tags/exec/',
+        cache: false,
+        type: 'POST',
+        contentType: false,
+        processData: false,
+        data: form_data,
+        success: function(data, message, jqxhr) {
+            if (data['error']) {
+                $('#custombox-tag-setting-error > p').text(data['error']);
+                $('#custombox-tag-setting-error').css('display', 'block');
+                return;
+            }
+            location.reload();
+        },
+        error: function(jqxhr, message, error) {
+            alert(message);
+            $.fn.custombox('close');
+        }
+    });
+}
+
+(function($) {
+    $('.creator-overview-delete').on("click touchstart", function(event){
+      $('#custombox-delete-url').val($(this).data('url'));
+      $('.js-episode-delete-volume').html($(this).data('volume'));
+      $.fn.custombox({
+        url: '#js-custombox-delete',
+      });
+    });
+    $('#creator-title-edit').on("click touchstart", function(event){
+      $.fn.custombox({
+        url: '#js-custombox-title-edit',
+      });
+    });
+    $('#creator-comment-enabled-setting').on("click touchstart", function(event){
+      $.fn.custombox({
+        url: '#js-custombox-comment-enabled-setting',
+      });
+    });
+    $('#creator-tag-setting').on("click touchstart", function(event){
+      $.fn.custombox({
+        url: '/manga/2361/edit/tags/'
+      });
+	customboxTagSettingScroll();
+    });
+    $('#creator-delete-series').on("click touchstart", function(event){
+      $('#custombox-series-delete-url').val($(this).data('url'));
+      $.fn.custombox({
+        url: '#js-custombox-delete-series'
+      });
+    });
+
+function customboxTagSettingScroll(){
+	var h = $(window).height()-334;
+	var scroll_h = $("#custombox-tag-setting-scroll").height();
+	if(scroll_h>h){
+		$('#custombox-tag-setting-scroll-wrapper').css({"max-height":h,"overflow-y":"scroll"});
+	}else{
+		$('#custombox-tag-setting-scroll-wrapper').css({"max-height":"auto","overflow-y":"visible"});
+	}
+}
+$(window).on("load resize", function(){
+	customboxTagSettingScroll();
+});
+
+})(jQuery);
+
+</script>
+
+<section id="js-custombox-comment-enabled-setting" class="custombox-nomal-container02 custombox-comment-setting-container" style="display:none;">
+  <div id="custombox-comment_enabled-setting-wrapper">
+  <form id="custombox-comment-enabled-form-id" class="custombox-comment-enabled-form" action=/manga/2361/edit/comment_enabled/  onsubmit="return false" method="POST">
+<input type="hidden" name="csrf_token" value="nefVz5NYBqPseKhXXvIW2nzci3FJKi2zY-grpUUm" />
+    <h1 class="custombox-nomal-title"><span class="custombox-comment-setting-title">コメントの設定</span></h1>
+    <p class="custombox-comment-setting-txt01">投稿した作品へのコメントを</p>
+    <input type="radio" name="comment_enabled" value="1" id="creator-comment-on" class="custombox-radio" checked>
+    <label for="creator-comment-on" class="custombox-radio-label">可能にする</label>
+    <input type="radio" name="comment_enabled" value="0" id="creator-comment-off" class="custombox-radio">
+    <label for="creator-comment-off" class="custombox-radio-label">ブロックする</label>
+    <button type="submit" onclick="return editCommentEnabled(this.form);" class="custombox-btn-comment-setting">設定の完了</button>
+  </form>
+  </div>
+
+  <div id="custombox-comment_enabled-error" style="display:none;">
+    <p id="custombox-comment_enabled-error-text" class="custombox-error-text"></p>
+    <a onclick="$.fn.custombox('close');" class="custombox-comment_enabled-setting-no">閉じる</a>
+  </div>  
+</section>
+<script>
+  function editCommentEnabled(form) {
+    var form_data = new FormData();
+    form_data.append('csrf_token', form.csrf_token.value);
+    form_data.append('comment_enabled', $('#custombox-comment-enabled-form-id').find('input[name=comment_enabled]:checked').val());
+
+    var $jqxhr = $.ajax({
+        url: '/manga/2361/edit/comment_enabled/',
+        cache: false,
+        type: 'POST',
+        contentType: false,
+        processData: false,
+        data: form_data,
+        success: function(data, message, jqxhr) {
+            if (data['error']) {
+                $('#custombox-comment_enabled-setting-wrapper').css('display', 'none');
+                $('#custombox-comment_enabled-error > p').text(data['error']);
+                $('#custombox-comment_enabled-error').css('display', 'block');
+                return;
+            }
+            location.reload();
+        },
+        error: function(jqxhr, message, error) {
+            alert(message);
+        }
+    });
+  }
+</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46141432-2', 'mangabox.me');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>
