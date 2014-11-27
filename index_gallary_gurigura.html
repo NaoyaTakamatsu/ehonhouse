@@ -54,7 +54,7 @@
 <body>
 <div data-role="page" id="home">
 
-<div class="head">
+<div class="head" style="background:#F26F21;">
 <!--<a href="index.html"><img alt="えほんハウス" src="img/ehonhouse-logo.png"></a>-->
 <!--ヘッダーの部分-->
 <div class="container clearfix">
@@ -66,10 +66,10 @@
             <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse_">メニュー<span class="icon-bar"></span> </a>
             <div class="nav-collapse nav-collapse_  collapse">
                   <ul class="nav sf-menu">
-                <li><a href="index.html" rel="external">ホーム</a></li>
-                 <li><a href="index_new.html" rel="external">新着</a></li>
-                <li class="active"><a href="index_rank.html" rel="external">人気</a></li>
-                <li><a href="index_rogin.html" rel="external">投稿</a></li>
+                <li><a href="index.html" rel="external" style="color:#ffffff;">ホーム</a></li>
+                 <li><a href="index_new.html" rel="external" style="color:#ffffff;">新着</a></li>
+                <li class="active"><a href="index_rank.html" rel="external" style="color:#ffffff;">人気</a></li>
+                <li><a href="index_rogin.html" rel="external" style="color:#ffffff;">投稿</a></li>
               </ul>
                 </div>
           </div>
@@ -80,11 +80,34 @@
 <!--ヘッダーの部分-->
 </div>
 
-<div data-role="content" >
+<div data-role="content" style="background:#F7F2E0">
 <h1>ぐりとぐら</h1>
-<ul data-role="listview" data-inset="true">
-<li><a href="#gallery1" >ぐりとぐらを読む!!</a></li>
-</ul>
+<a href="#gallery1" id="yomubottun">ぐりとぐらを読む</a>
+<style>
+            #yomubottun{
+                margin:10px;
+                padding:10px;
+                background:#57BB89;
+                color:#ffffff;
+            }
+            #yomubottun:hover {
+                  background: #ee3e52;
+                  } 
+            </style>
+<!--<ul data-role="listview" data-inset="true">
+<li><a href="#gallery1" id="yomubottun">ぐりとぐらを読む!!</a></li>
+<style>
+            #yomubottun{
+                margin:10px;
+                padding:10px;
+                background:#57BB89;
+                color:#ffffff;
+            }
+            #yomubottun:hover {
+                  background: #ee3e52;
+                  } 
+            </style>
+</ul>-->
 <div class="samune"><img alt="えほんハウス" src="img/gurigura.gif"></div>
 <h2>あらすじ</h2>
 <p>歌いながら森へでかけたぐりとぐら。大きなたまごを発見し「あさからばんまでたべても、まだのこるぐらいのおおきいかすてら」を焼くことにした。甘いにおいにつられて、森の動物たちが次々と集まってくる。「けちじゃないよ　ぐりとぐらごちそうするからまっていて」。さあ、できあがり。おなべのふたをとると、ふんわり黄色いかすてらが顔を出す。</p>
@@ -93,7 +116,7 @@
 <!--</ul>-->
 </div>
 <!--footer-->
-<div data-role="footer">
+<div data-role="footer" style="background:#F26F21">
 <!--<h2>えほんハウス</h2>-->
 <div class="container clearfix">
     <ul class="list-social pull-right">
@@ -107,8 +130,8 @@
 </div>
 
 <div data-role="page" data-add-back-btn="true" id="gallery1" class="gallery-page">
-<div data-role="header">
-<h4>ぐりとぐら</h4>
+<div data-role="header" style="background:#F26F21;">
+<h2 style="color:#ffffff;">ぐりとぐら</h2>
 </div>
 <div data-role="content">
 <ul class="gallery">
@@ -126,8 +149,8 @@
 <li><a href="images/full/012.jpg" rel="external"><img src="images/thumb/012.jpg" alt="12page" /></a></li>
 </ul>
 </div>
-<div data-role="footer" style="background-color:#ffffff;">
-<h4>えほんハウス</h4>
+<div data-role="footer" style="background:#F26F21;">
+<h2 style="color:#ffffff;">えほんハウス</h2>
 </div>
 </div>
 

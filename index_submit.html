@@ -76,37 +76,44 @@
     <div class="container">
           <div class="row">
         <!--<div class="span12">-->
-        <article class="span2">
+        <article class="span3">
         <div class="user_submit">
-        <font color="#000000"><p id="creator-author-name" class="js-profile-edit-button">nakkle13</p></font>
-        <img src="img/naoyasamune.jpg" width="60px" height="60px">
+        <!--<font color="#000000"><p id="creator-author-name" class="js-profile-edit-button">高松直也</p></font>
+        <img src="img/naoyasamune.jpg" width="60px" height="60px">-->
+        <div><img src="img/naoyasamune.jpg" width="70px" height="70px">高松直也</div>
 <hr>
-    <font color="#000000"><div id="creator-favorite-counts">お気に入り<span>0</span></div></font>
+    <div><img src="img/heart.png" width="30px" height="30px">お気に入り<span>0</span></div>
+    <div><img src="img/readbook.png" width="30px" height="30px">閲覧数<span>0</span></div>
+    <!--<font color="#000000"><div id="creator-favorite-counts">閲覧数<span>0</span></div></font>-->
+    <!--<font color="#000000"><div id="creator-favorite-counts">お気に入り<span>0</span></div></font>-->
 <hr>
-    <a class="js-profile-edit-button creator-profile-edit-button"><span>プロフィール編集</span></a>
+    <a class="js-profile-edit-button creator-profile-edit-button" style="color:#F47D30;"><span>プロフィール編集</span></a>
+    <!--
     <br>
-    <a id="js-twitter-button" class="creator-twitter-button"><span>twitter設定</span></a>
+    <font color="#000000"><a id="js-twitter-button" class="creator-twitter-button"><span>twitter設定</span></a></font>
       <div id="js-twitter-balloon" class="creator-button-balloon" style="display:none;">
-        <a id="js-twitter-cheer-setting"><span>応援ツイート設定</span></a>
+        <font color="#000000"><a id="js-twitter-cheer-setting"><span>応援ツイート設定</span></a></font>
         <br>
-        <a id="js-twitter-contribute-setting"><span>更新お知らせ設定</span></a>
+        <font color="#000000"><a id="js-twitter-contribute-setting"><span>更新お知らせ設定</span></a></font>
         
       </div>
       <br>
-    <a id="js-creator-information-button" class="creator-information-button"><span>運営のお知らせ<span class="creator-information-new">NEW</span></span></a>
+    <font color="#000000"><a id="js-creator-information-button" class="creator-information-button"><span>運営のお知らせ<span class="creator-information-new">NEW</span></span></a></font>
 
     <div id="creator-account-button-wapper">
-      <a id="js-creator-account-button" class="creator-account-button-header">アカウント設定</a>
+      <font color="#000000"><a id="js-creator-account-button" class="creator-account-button-header">アカウント設定</a></font>
       <div id="js-account-balloon" class="creator-button-balloon" style="display:none;">
-        <a id="js-password-edit-button" class="creator-password-edit-button"><span>パスワード変更</span></a>
+        <font color="#000000"><a id="js-password-edit-button" class="creator-password-edit-button"><span>パスワード変更</span></a></font>
         <br>
-        <a id="js-mail-edit-button" class="creator-mail-edit-button"><span>メールアドレス変更</span></a>
+        <font color="#000000"><a id="js-mail-edit-button" class="creator-mail-edit-button"><span>メールアドレス変更</span></a></font>
         <br>
-        <a href="/account/withdrawal/"><span>退会手続き</span></a>
+        <font color="#000000"><a href="/account/withdrawal/"><span>退会手続き</span></a></font>
       </div>
     </div>
+    -->
     </div>
     </article>
+    
     <script>
 $(function() {
 
@@ -187,40 +194,76 @@ $(function() {
 
 });
 </script>
-            <article class="span10">
-            <button class="btn btn-lg btn-primary btn-block" style="margin:10px; padding:10px;" type="submit" onClick="location.href='index_submit_new.html'">作品を投稿する!!</button>
+            <article class="span9">
+            <!--<button class="btn btn-lg btn-primary btn-block" style="margin:10px; padding:10px;" type="submit" onClick="location.href='index_submit_new.html'"#043D5D>作品を投稿する!!</button>-->
+            <!--style="margin:10px; padding:10px;background:#57BB89;"-->
+            <button id="toukoubutton" type="button" class="btn btn-lg btn-warning btn-block"  onClick="location.href='index_submit_new.html'">作品を投稿する!!</button>
+            <style>
+            #toukoubutton{
+                margin:10px;
+                padding:10px;
+                background:#57BB89;
+            }
+            #toukoubutton:hover {
+                  background: #ee3e52;
+                  } 
+            </style>
             <div class="clear"></div>
         <ul class="thumbnails thumbnails-1 list-services">
               <li class="span4">
             <div class="thumbnail thumbnail-1"> <img  src="img/gurigurabig.gif" alt="">
+            <section>
                         	<div class="hyouka">
             	<a href="index_gallary_gurigura.html" class="viewer_link">ぐりとぐら</a>
-            	<div class="iine-count"><img  src="img/heart.png" alt=" " width="28px" height="28px">8,282,455</div>
+            	<div class="samune"><img src="img/naoyasamune.jpg" width="50%" height="50%">高松直也</div>
+            	<ul class="yoko">
+            	<li><img  src="img/heart.png" width="20%" height="20%">8,282,455</li>
+            	<li><img  src="img/readbook.png" width="20%" height="20%">8,282,455</li>
+            	</ul>
 				</div>
+				</section>
              </div>
           </li>
           <li class="span4">
             <div class="thumbnail thumbnail-1"> <img  src="img/sirokumabig.jpg" alt="">
+            <section>
                         	<div class="hyouka">
-            	<a href="index_gallary.html" class="viewer_link">しろくまちゃんのほっとけーき</a>
-            	<div class="iine-count"><img  src="img/heart.png" alt=" " width="28px" height="28px">8,282,455</div>
+            	<a href="index_gallary_gurigura.html" class="viewer_link">しろくまちゃん..</a>
+            	<div class="samune"><img src="img/naoyasamune.jpg" width="50%" height="50%">高松直也</div>
+            	<ul class="yoko">
+            	<li><img  src="img/heart.png" width="20%" height="20%">8,282,455</li>
+            	<li><img  src="img/readbook.png" width="20%" height="20%">8,282,455</li>
+            	</ul>
 				</div>
+				</section>
              </div>
           </li>
           <li class="span4">
             <div class="thumbnail thumbnail-1"> <img  src="img/gurigurabig.gif" alt="">
+            <section>
                         	<div class="hyouka">
             	<a href="index_gallary_gurigura.html" class="viewer_link">ぐりとぐら</a>
-            	<div class="iine-count"><img  src="img/heart.png" alt=" " width="28px" height="28px">8,282,455</div>
+            	<div class="samune"><img src="img/naoyasamune.jpg" width="50%" height="50%">高松直也</div>
+            	<ul class="yoko">
+            	<li><img  src="img/heart.png" width="20%" height="20%">8,282,455</li>
+            	<li><img  src="img/readbook.png" width="20%" height="20%">8,282,455</li>
+            	</ul>
 				</div>
+				</section>
              </div>
           </li>
           <li class="span4">
             <div class="thumbnail thumbnail-1"> <img  src="img/sirokumabig.jpg" alt="">
+            <section>
                         	<div class="hyouka">
-            	<a href="index_gallary.html" class="viewer_link">しろくまちゃんのほっとけーき</a>
-            	<div class="iine-count"><img  src="img/heart.png" alt=" " width="28px" height="28px">8,282,455</div>
+            	<a href="index_gallary_gurigura.html" class="viewer_link">しろくまちゃん..</a>
+            	<div class="samune"><img src="img/naoyasamune.jpg" width="50%" height="50%">高松直也</div>
+            	<ul class="yoko">
+            	<li><img  src="img/heart.png" width="20%" height="20%">8,282,455</li>
+            	<li><img  src="img/readbook.png" width="20%" height="20%">8,282,455</li>
+            	</ul>
 				</div>
+				</section>
              </div>
           </li>
           </article>

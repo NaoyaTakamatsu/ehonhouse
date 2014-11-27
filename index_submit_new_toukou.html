@@ -74,13 +74,13 @@
       <div id="content"><div class="ic"></div>
     <div class="container">
           <div class="row">
-        <article class="span12" style="border-style: solid ; border-width: 1px; border-radius: 10px; border-color: #000000; background:#e2bf86; padding:10px; margin:10px;">
+        <article class="span12" style="border-style: solid ; border-width: 1px; border-radius: 10px; border-color: #000000; background:#E3DECC; padding:10px; margin:10px;">
     <div id="creator-edit-wrapper">
 
 
   <div class="creator-topicpath">
-    <a href="/manga/" class="creator-topicpath-link"><span>作品一覧</span></a>
-    <a href="/manga/2361/edit/" class="creator-topicpath-link"><span>ぐりとぐら</span></a>
+    <a href="/manga/" class="creator-topicpath-link" style="color:#F47D30;"><span>作品一覧</span></a>
+    <a href="/manga/2361/edit/" class="creator-topicpath-link" style="color:#F47D30;"><span>ぐりとぐら</span></a>
     <span></span>
   </div>
 
@@ -147,7 +147,7 @@
 
        </div><!--creator-edit-inner-->
 
-       <p class="creator-edit-notice">登録する前に<a href="/info/rule/" target="_blank">投稿のルール</a>をお読みください。</p>
+       <p class="creator-edit-notice">登録する前に<a href="/info/rule/" target="_blank" style="color:#F47D30;">投稿のルール</a>をお読みください。</p>
 
   </div><!--creator-edit-wrapper-->
 
@@ -156,8 +156,19 @@
       <div id="creator-edit-button-wrapper">
 
         <!--<button class="disable js-episode-edit-button" disabled type="submit" formmethod="post" formtype="_self" id="creator-submit-button">編集の完了</button>-->
-        <button class="btn btn-lg btn-primary btn-block" type="submit" onClick="location.href='index_submit.html'">編集の完了</button>
-        <a class="disable js-episode-edit-button" data-href="/info/preview/" id="creator-preview-button">ビューアで確認</a><!--/episode//viewer/-->
+        <button id="hensyuubutton" type="button" class="btn btn-lg btn-warning btn-block" onClick="location.href='index_submit.html'">編集の完了</button>
+        <style>
+            #hensyuubutton{
+                margin:10px;
+                padding:10px;
+                background:#57BB89;
+            }
+            #hensyuubutton:hover {
+                  background: #ee3e52;
+                  } 
+            </style>
+        <!--<button class="btn btn-lg btn-primary btn-block" type="submit" onClick="location.href='index_submit.html'">編集の完了</button>-->
+        <a class="disable js-episode-edit-button" data-href="/info/preview/" id="creator-preview-button" style="color:#F47D30;">ビューアで確認</a><!--/episode//viewer/-->
 <!--
         <div id="creator-publish-wrapper">
           <span class="creator-publish-text">この話を公開</span>
@@ -170,7 +181,7 @@
 
         </div>
 
-        <a href="/manga/2361/edit/" class="creator-back-button">戻る</a>
+        <a href="/manga/2361/edit/" class="creator-back-button" style="color:#F47D30;">戻る</a>
 
       </div>
     </div>

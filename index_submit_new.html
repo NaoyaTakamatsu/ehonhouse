@@ -75,17 +75,17 @@
       <div id="content"><div class="ic"></div>
     <div class="container">
           <div class="row">
-        <article class="span12" style="border-style: solid ; border-width: 1px; border-radius: 10px; border-color: #000000; background:#e2bf86; padding:10px; margin:10px;">
+        <article class="span12" style="border-style: solid ; border-width: 1px; border-radius: 10px; border-color: #000000; background:#E3DECC; padding:10px; margin:10px;">
               <!--ログイン画面-->
     <section id="creator-new-wrapper">
-   <h1 id="creator-new-title">絵本の登録</h1>
+   <h2 id="creator-new-title">絵本の登録</h2>
 
      <form action='/manga/create/' enctype="multipart/form-data" method="POST">
 <input type="hidden" name="csrf_token" value="nefVz5NYBqPseKhXXvIW2nzci3FJKi2zY-grpUUm" />
       <div id="creator-new-inner">
 
          <input type="hidden" id="locale" name="" value="ja">
-         <h2 class="creator-new-flow-txt">絵本のタイトルを入力してください</h2>
+         <h3 class="creator-new-flow-txt">絵本のタイトルを入力してください</h3>
          
          <input type="text" id="manga-title" name="title" class="creator-new-series-title" placeholder="絵本のタイトル" value="">
 
@@ -105,7 +105,7 @@
          </script>
 
          <hr>
-         <h2 class="creator-new-flow-txt">絵本の表紙画像を投稿してください</h2>
+         <h3 class="creator-new-flow-txt">絵本の表紙画像を投稿してください</h3>
            
          <div id="creator-cover-upload-content">
 
@@ -133,7 +133,7 @@
            }
          </script>
          <hr>
-         <h2 class="creator-tag-setting">タグの設定</h2>
+         <h3 class="creator-tag-setting">タグの設定</h3>
 	<p class="creator-tag-setting-notice">
 		・タグを設定することで、作品を見つけやすくなります<br>
 		・タグは<span class="creator-tag-setting-emphasize">3つ</span>まで設定できます
@@ -147,7 +147,7 @@
 		<label for="tag3" class="creator-tag-setting-label"><input type="checkbox" id="tag3" name="tag3" value="1"><span class="creator-tag-setting-label-name">ギャグ</span></label>
 	
 		<label for="tag4" class="creator-tag-setting-label"><input type="checkbox" id="tag4" name="tag4" value="1"><span class="creator-tag-setting-label-name">青春</span></label>
-	
+        
 		<label for="tag5" class="creator-tag-setting-label"><input type="checkbox" id="tag5" name="tag5" value="1"><span class="creator-tag-setting-label-name">シュール</span></label>
 	
 		<label for="tag6" class="creator-tag-setting-label"><input type="checkbox" id="tag6" name="tag6" value="1"><span class="creator-tag-setting-label-name">バトル</span></label>
@@ -183,7 +183,7 @@
 		<label for="tag22" class="creator-tag-setting-label"><input type="checkbox" id="tag22" name="tag22" value="1"><span class="creator-tag-setting-label-name">インディーズ限定公開</span></label>
 	</div>
          <hr>
-         <h2 class="creator-comment-setting">コメントの設定</h2>
+         <h3 class="creator-comment-setting">コメントの設定</h3>
          <div class="creator-radio-wrapper">
            <span class="creator-radio-txt">この絵本へのコメントを</span>
            <br>
@@ -201,9 +201,20 @@
              <div class="creator-upload-bottom-wapper">
         </div>
      </form>
-     <a id="creator-back-button"><span>前に戻る</span></a>
+     <a id="creator-back-button" style="color:#F47D30;"><span>前に戻る</span></a>
             <!--type="submit"formmethod="post" formtype="_self" id="creator-next-button" このへんいるかも？？-->
-           <button class="btn btn-lg btn-primary btn-block" type="submit" onClick="location.href='index_submit_new_toukou.html'">登録を完了する</button>
+            <button id="tourokubutton" type="button" class="btn btn-lg btn-warning btn-block" onClick="location.href='index_submit_new_toukou.html'">登録を完了する</button>
+            <style>
+            #tourokubutton{
+                margin:10px;
+                padding:10px;
+                background:#57BB89;
+            }
+            #tourokubutton:hover {
+                  background: #ee3e52;
+                  } 
+            </style>
+           <!--<button class="btn btn-lg btn-primary btn-block" type="submit" onClick="location.href='index_submit_new_toukou.html'">登録を完了する</button>-->
         </div>
 </div>
 </div>

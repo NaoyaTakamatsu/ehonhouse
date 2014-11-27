@@ -4,7 +4,7 @@
 	font-family: 'Fredericka the Great', cursive;
 }
 .ui-page {
-	background:#f0c064;
+	background:/*#f0c064*/#F7F2E0/*#00C4AD*/;
 	/*background: url(../img/bg-ehon.png) repeat;*/
 	/*color: #fff;*/
 }
@@ -63,9 +63,9 @@ h4{
 .gallery li a {
 	display: block;
 	margin: 5px;
-	background:#e2bf86;
+	background:/*#e2bf86*/ #E3DECC;
 	/*background-color:#3b1e14;*/
-	border: 1px solid #3c3c3c;
+	/*border: 1px solid #3c3c3c;*/
 }
 .gallery li img {
 	display: block;

@@ -153,19 +153,19 @@ $('.fade').slick({
         <span id="responsiveFlag"></span>-->
         <div class="row">
           <div class="span12">
-        <div class="block-slogan" style="border-style: solid ; border-width: 1px; border-radius: 10px; border-color: #000000; background-color: #e2bf86; padding: 10px">
+        <!--<div class="block-slogan" style="border-style: solid ; border-width: 1px; border-radius: 10px; border-color:#FFC153; background-color:  #FFA200; padding: 10px">
               <h2>えほんハウスとは??</h2>
-              <!--<h5>個性豊かな作家が書いた、<br>オリジナルの絵本が無料で読めるサービス!</h5>-->
               <div>
             <h5>個性豊かな作家が書いた、<br>オリジナルの絵本が無料で読めるサービス!</h5>
           </div>
             </div>
+            -->
             </div>
             </div>
                     </div>
                     <article class="span5">
               <h3>新着</h3>
-              <ul class="list-photo">
+              <ul class="list-photo" >
             <li><a href="index_gallary_gurigura.html" class="imghover"><img src="img/gurigurasmall.gif" alt="" /></a></li>
             <li><a href="img/image-blank.png" class="imghover" ><img src="img/sirokumasmall.jpg " alt="" /></a></li>
             <li><a href="img/image-blank.png" class="imghover" ><img src="img/gurigurasmall.gif" alt="" /></a></li>
@@ -197,7 +197,18 @@ $('.fade').slick({
           <form id="search" action="search.php" method="GET" accept-charset="utf-8" >
             <div class="clearfix">
               <input type="text" name="s" onBlur="if(this.value=='') this.value=''" onFocus="if(this.value =='' ) this.value=''" >
-              <a href="#" onClick="document.getElementById('search').submit()" class="btn btn-1">検索</a> </div>
+              <a href="#" id="serchbottun" onClick="document.getElementById('search').submit()"><!--class="btn btn-1"-->検索</a> </div>
+              <style>
+            #serchbottun{
+                margin:10px;
+                padding:10px;
+                background:#57BB89;
+                color:#ffffff;
+            }
+            #serchbottun:hover {
+                  background: #ee3e52;
+                  } 
+            </style>
           </form>
           <h3>ジャンル</h3>
           <ul class="list extra extra1">           
